@@ -10,7 +10,7 @@ add_executable(
 
     ${APP_RESOURCES}    # App resources file
 )
-
+target_compile_definitions(${PROJECT_NAME} PUBLIC -DQATERIAL_STATIC)
 target_compile_features(
     ${PROJECT_NAME}
     PRIVATE
@@ -35,5 +35,6 @@ target_link_libraries(
         Qt5::Quick
         Qt5::Qml
         myplugin        # Our plugin target
+        qaterialplugin
 )
 
