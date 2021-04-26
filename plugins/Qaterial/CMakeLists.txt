@@ -16,7 +16,7 @@ add_library( qaterialplugin SHARED
 
     ${PLUGIN_RESOURCES}     # Plugin resources file
 )
-target_compile_definitions(qaterialplugin PUBLIC -DQATERIAL_STATIC)
+target_compile_definitions(qaterialplugin PUBLIC -DQATERIAL_SHARED)
 target_include_directories(qaterialplugin PUBLIC ${CMAKE_CURRENT_LIST_DIR} ${CMAKE_CURRENT_LIST_DIR}/../../include)
 target_compile_features(
     qaterialplugin
