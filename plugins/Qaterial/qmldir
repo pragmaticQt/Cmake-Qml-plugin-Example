@@ -1,0 +1,6 @@
+
+module Qaterial
+
+plugin qaterialplugin
+
+typeinfo plugin.qmltypes
