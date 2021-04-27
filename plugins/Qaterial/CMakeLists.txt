@@ -4,10 +4,10 @@ qt5_add_resources(PLUGIN_RESOURCES ${CMAKE_CURRENT_LIST_DIR}/plugin.qrc)
 add_library( qaterialplugin SHARED
 
     ${CMAKE_CURRENT_LIST_DIR}/qaterialplugin.h
-    ${CMAKE_CURRENT_LIST_DIR}/IconDescription.hpp
+#    ${CMAKE_CURRENT_LIST_DIR}/IconDescription.hpp
 
     ${CMAKE_CURRENT_LIST_DIR}/qaterialplugin.cpp
-    ${CMAKE_CURRENT_LIST_DIR}/IconDescription.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../../Qaterial/IconDescription.cpp
 
     # It's not important to include 'qmldir' or 'plugin.qmltypes' here,
     # but it will make IDEs (such as Qt Creator) to include them in project tree
@@ -17,7 +17,7 @@ add_library( qaterialplugin SHARED
     ${PLUGIN_RESOURCES}     # Plugin resources file
 )
 target_compile_definitions(qaterialplugin PUBLIC -DQATERIAL_SHARED)
-target_include_directories(qaterialplugin PUBLIC ${CMAKE_CURRENT_LIST_DIR} ${CMAKE_CURRENT_LIST_DIR}/../../include)
+target_include_directories(qaterialplugin PUBLIC ${CMAKE_CURRENT_LIST_DIR} ${CMAKE_CURRENT_LIST_DIR}/../..)
 target_compile_features(
     qaterialplugin
     PRIVATE

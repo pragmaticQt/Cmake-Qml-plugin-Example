@@ -1,5 +1,5 @@
 #include "qaterialplugin.h"
-#include "IconDescription.hpp"
+#include "Qaterial/IconDescription.hpp"
 
 #include <QtQml/QtQml>
 
