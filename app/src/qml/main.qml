@@ -11,11 +11,23 @@ ApplicationWindow {
     width: 640
     height: 480
     title: "Lyzer"
+
     IconDescription {
         id: iconDes
+        cache: false
+        source: "qrc:/qt.png"
         width: 400
         height: 100
         color: "red"
+    }
+
+    IconLabelImpl {
+//        horizontalAlignment: Qt.AlignHCenter
+//        verticalAlignment: Qt.AlignBottom
+//        icon: iconDes
+        iconItem: Image {
+            source: "qrc:/qt.png"
+        }
     }
 
     // 'myplugin' C++ class
@@ -24,17 +36,24 @@ ApplicationWindow {
         color: iconDes.color
         width: 100
         height: 50
+        anchors.bottom: myQml.top
+        anchors.horizontalCenter: myQml.horizontalCenter
+    }
+
+    MyQml {
+        id: myQml
         anchors.centerIn: parent
+        onClicked: { MyScript.onClicked(pluginItem) }
     }
 
-    Loader {
-        id: loader
-        source: Qt.resolvedUrl("qrc:/plugin/MyQml.qml")
-    }
+//    Loader {
+//        id: loader
+//        source: Qt.resolvedUrl("qrc:/plugin/MyQml.qml")
+//    }
 
-    Connections {
-        target: loader.item
-        enabled: loader.status === Loader.Ready
-        function onClicked() { MyScript.onClicked(pluginItem) }
-    }
+//    Connections {
+//        target: loader.item
+//        enabled: loader.status === Loader.Ready
+//        function onClicked() { MyScript.onClicked(pluginItem) }
+//    }
 }

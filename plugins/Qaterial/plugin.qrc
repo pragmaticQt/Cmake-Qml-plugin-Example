@@ -1,5 +1,4 @@
 <RCC>
-    <qresource prefix="/plugin">
-
-    </qresource>
+    <qresource prefix="/plugin"/>
+    <qresource prefix="/"/>
 </RCC>
