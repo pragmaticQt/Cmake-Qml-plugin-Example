@@ -18,5 +18,16 @@ set(QML_IMPORT_PATH ${CMAKE_CURRENT_BINARY_DIR}/plugins CACHE STRING "Qt Creator
 # Tell CMake to call moc automaticly
 set(CMAKE_AUTOMOC ON)
 
+set(QATERIAL_SOURCE_DIR  ${CMAKE_CURRENT_LIST_DIR}/Qaterial)
+
+set(QATERIAL_DISPLAY_SRCS
+  ${QATERIAL_SOURCE_DIR}/IconDescription.hpp
+  ${QATERIAL_SOURCE_DIR}/IconDescription.cpp
+  ${QATERIAL_SOURCE_DIR}/IconLabelImpl.hpp
+  ${QATERIAL_SOURCE_DIR}/IconLabelImpl.cpp
+  ${QATERIAL_SOURCE_DIR}/IconLabelPositionner.hpp
+  ${QATERIAL_SOURCE_DIR}/IconLabelPositionner.cpp
+)
+
 add_subdirectory(app)
 add_subdirectory(plugins)
