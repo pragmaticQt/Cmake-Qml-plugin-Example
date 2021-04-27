@@ -27,110 +27,52 @@
 
 // Library Headers
 #include <Qaterial/Export.hpp>
+#include <Qaterial/Property.hpp>
 
 // Dependencies Headers
-#include <QUrl>
-#include <QColor>
-#include <qqml.h>
+#include <QtCore/QUrl>
+#include <QtGui/QColor>
+
 // ──── DECLARATION ────
 
 // ──── CLASS ────
+
 namespace qaterial {
 
-
+// Behave like QQuickIcon (that is private)
 class QATERIAL_API_ IconDescription : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QUrl   source READ source WRITE setSource NOTIFY sourceChanged)
-    Q_PROPERTY(int    width  READ width  WRITE setWidth  NOTIFY widthChanged)
-    Q_PROPERTY(int    height READ height WRITE setHeight NOTIFY heightChanged)
-    Q_PROPERTY(QColor color  READ color  WRITE setColor  NOTIFY colorChanged)
-    Q_PROPERTY(bool   cache  READ cache  WRITE setCache  NOTIFY cacheChanged)
-
-    QML_ELEMENT
+    QATERIAL_REGISTER_TO_QML(IconDescription);
     Q_CLASSINFO(CLASSINFO_HEADER, "Qaterial/IconDescription 1.0")
 
-public:
     // ──── CONSTRUCTOR ────
+public:
     IconDescription(QObject* parent = nullptr) : QObject(parent) {}
 
-    QUrl   source() const
-    {
-        return m_source;
-    }
-    int    width() const
-    {
-        return m_width;
-    }
-    int    height() const
-    {
-        return m_height;
-    }
-    QColor color() const
-    {
-        return m_color;
-    }
-    bool   cache() const
-    {
-        return m_cache;
-    }
+    // ──── PROPERTY ────
+public:
+    // This property holds the name of the icon to use.
+    // The icon will be loaded as a regular image.
+    QATERIAL_PROPERTY(QUrl, source, Source);
 
-public slots:
-    void setSource(QUrl source)
-    {
-        if (m_source == source)
-            return;
+    // This property holds the width of the icon.
+    // The icon's width will never exceed this value, though it will shrink when necessary.
+    QATERIAL_PROPERTY_D(int, width, Width, 24);
 
-        m_source = source;
-        emit sourceChanged(m_source);
-    }
-    void setWidth(int width)
-    {
-        if (m_width == width)
-            return;
+    // This property holds the height of the icon.
+    // The icon's height will never exceed this value, though it will shrink when necessary.
+    QATERIAL_PROPERTY_D(int, height, Height, 24);
 
-        m_width = width;
-        emit widthChanged(m_width);
-    }
-    void setHeight(int height)
-    {
-        if (m_height == height)
-            return;
+    // This property holds the color of the icon.
+    // The icon is tinted with the specified color, unless the color is set to "transparent".
+    QATERIAL_PROPERTY(QColor, color, Color);
 
-        m_height = height;
-        emit heightChanged(m_height);
-    }
-    void setColor(QColor color)
-    {
-        if (m_color == color)
-            return;
-
-        m_color = color;
-        emit colorChanged(m_color);
-    }
-    void setCache(bool cache)
-    {
-        if (m_cache == cache)
-            return;
-
-        m_cache = cache;
-        emit cacheChanged(m_cache);
-    }
-
-signals:
-    void sourceChanged(QUrl source);
-    void widthChanged(int width);
-    void heightChanged(int height);
-    void colorChanged(QColor color);
-    void cacheChanged(bool cache);
-
-private:
-    QUrl   m_source;
-    int    m_width  = 24;
-    int    m_height = 24;
-    QColor m_color;
-    bool   m_cache  = true;
+    // This property specifies whether the icon should be cached.
+    // The default value is true.
+    QATERIAL_PROPERTY_D(bool, cache, Cache, true);
 };
 
 }
+
 #endif

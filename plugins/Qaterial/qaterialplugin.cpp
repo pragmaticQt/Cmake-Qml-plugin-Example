@@ -4,6 +4,8 @@
 #include <QtQml/QtQml>
 
 void QaterialPlugin::registerTypes(const char* uri) {
-    // Register our 'MyQuickItem' in qml engine
-    qmlRegisterType<qaterial::IconDescription>(uri, 1, 0, "IconDescription");
+
+    Q_ASSERT(uri == QLatin1String("Qaterial"));
+
+    qaterial::IconDescription::registerToQml();
 }

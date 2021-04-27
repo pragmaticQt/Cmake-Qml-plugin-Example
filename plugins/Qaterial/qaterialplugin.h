@@ -1,10 +1,10 @@
-#ifndef MYPLUGIN_H
-#define MYPLUGIN_H
+#ifndef QATERIAL_PLUGIN_H
+#define QATERIAL_PLUGIN_H
 
 #include <QtQml/QQmlExtensionPlugin>
 
 /**
- * @brief The MyPlugin class. Simple qml plugin example.
+ * @brief The QaterialPlugin class.
  */
 
 class QaterialPlugin: public QQmlExtensionPlugin {
@@ -20,4 +20,4 @@ public:
     void registerTypes(const char* uri) override;
 };
 
-#endif // MYPLUGIN_H
+#endif // QATERIAL_PLUGIN_H
