@@ -35,6 +35,8 @@
 // ──── DECLARATION ────
 
 // ──── CLASS ────
+namespace qaterial {
+
 
 class QATERIAL_API_ IconDescription : public QObject
 {
@@ -130,5 +132,5 @@ private:
     bool   m_cache  = true;
 };
 
-
+}
 #endif

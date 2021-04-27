@@ -34,5 +34,7 @@
 // ──── DECLARATION ────
 
 // ──── FUNCTIONS ────
+namespace qaterial {
 
+}
 
