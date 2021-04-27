@@ -4,6 +4,7 @@ qt5_add_resources(PLUGIN_RESOURCES ${CMAKE_CURRENT_LIST_DIR}/plugin.qrc)
 add_library( qaterialplugin SHARED
 
     ${QATERIAL_DISPLAY_SRCS}
+    ${QATERIAL_IO_SRCS}
 
     ${CMAKE_CURRENT_LIST_DIR}/qaterialplugin.h
     ${CMAKE_CURRENT_LIST_DIR}/qaterialplugin.cpp

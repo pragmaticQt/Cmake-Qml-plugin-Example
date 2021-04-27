@@ -45,6 +45,7 @@ class QATERIAL_API_ IconLabelPositionner : public QObject
 {
     Q_OBJECT
     QATERIAL_REGISTER_TO_QML(IconLabelPositionner);
+    Q_CLASSINFO(CLASSINFO_HEADER, "Qaterial/IconLabelPositionner 1.0")
 
     // ──── CONSTRUCTOR ────
 public:

@@ -3,6 +3,7 @@
 #include "Qaterial/IconDescription.hpp"
 #include "Qaterial/IconLabelImpl.hpp"
 #include "Qaterial/IconLabelPositionner.hpp"
+#include "Qaterial/Clipboard.hpp"
 
 #include <QtQml/QtQml>
 
@@ -13,4 +14,5 @@ void QaterialPlugin::registerTypes(const char* uri) {
     qaterial::IconDescription      ::registerToQml();
     qaterial::IconLabelImpl        ::registerToQml();
     qaterial::IconLabelPositionner ::registerToQml();
+    qaterial::Clipboard            ::registerSingleton();
 }

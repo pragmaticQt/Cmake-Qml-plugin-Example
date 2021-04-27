@@ -29,5 +29,14 @@ set(QATERIAL_DISPLAY_SRCS
   ${QATERIAL_SOURCE_DIR}/IconLabelPositionner.cpp
 )
 
+set(QATERIAL_IO_SRCS
+#  ${QATERIAL_SOURCE_DIR}/TextFile.hpp
+#  ${QATERIAL_SOURCE_DIR}/TextFile.cpp
+  ${QATERIAL_SOURCE_DIR}/Clipboard.hpp
+  ${QATERIAL_SOURCE_DIR}/Clipboard.cpp
+#  ${QATERIAL_SOURCE_DIR}/FolderTreeModel.hpp
+#  ${QATERIAL_SOURCE_DIR}/FolderTreeModel.cpp
+)
+
 add_subdirectory(app)
 add_subdirectory(plugins)
