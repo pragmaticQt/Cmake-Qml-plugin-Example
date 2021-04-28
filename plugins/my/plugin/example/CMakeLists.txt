@@ -56,7 +56,7 @@ add_custom_command(
         $<TARGET_FILE_DIR:myplugin>/qmldir
     COMMAND
         cd $<TARGET_FILE_DIR:myplugin>/../../.. &&
-        ${QT_BIN}/qmlplugindump.exe -nonrelocatable my.plugin.example 1.0 . > my/plugin/example/plugin.qmltypes
+        ${QT_BIN}/qmlplugindump -nonrelocatable my.plugin.example 1.0 . > my/plugin/example/plugin.qmltypes
 
 )
 

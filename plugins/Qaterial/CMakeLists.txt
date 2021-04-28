@@ -53,7 +53,7 @@ add_custom_command(
         $<TARGET_FILE_DIR:qaterialplugin>/qmldir
     COMMAND
         cd $<TARGET_FILE_DIR:qaterialplugin>/.. &&
-        ${QT_BIN}/qmlplugindump.exe -nonrelocatable Qaterial 1.0 . > Qaterial/plugin.qmltypes
+        ${QT_BIN}/qmlplugindump -nonrelocatable Qaterial 1.0 . > Qaterial/plugin.qmltypes
 
 )
 
