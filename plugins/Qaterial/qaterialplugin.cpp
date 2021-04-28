@@ -5,7 +5,6 @@
 #include "Qaterial/IconLabelPositionner.hpp"
 #include "Qaterial/Clipboard.hpp"
 
-#include <QtQml/QtQml>
 
 void QaterialPlugin::registerTypes(const char* uri) {
 

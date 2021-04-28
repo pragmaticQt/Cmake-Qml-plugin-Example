@@ -1,7 +1,7 @@
 #ifndef QATERIAL_PLUGIN_H
 #define QATERIAL_PLUGIN_H
 
-#include <QtQml/QQmlExtensionPlugin>
+#include <QQmlExtensionPlugin>
 
 /**
  * @brief The QaterialPlugin class.
