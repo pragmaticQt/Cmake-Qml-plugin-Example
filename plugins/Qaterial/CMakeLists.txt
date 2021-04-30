@@ -5,13 +5,21 @@ add_library( qaterialplugin SHARED
 
     ${QATERIAL_DISPLAY_SRCS}
     ${QATERIAL_IO_SRCS}
+    ${QATERIAL_UTILS_SRCS}
 
-    ${CMAKE_CURRENT_LIST_DIR}/qaterialplugin.h
     ${CMAKE_CURRENT_LIST_DIR}/qaterialplugin.cpp
 
     ${CMAKE_CURRENT_LIST_DIR}/qmldir
 
     ${PLUGIN_RESOURCES}     # Plugin resources file
+)
+# Version
+target_compile_definitions(qaterialplugin
+  PRIVATE -DQATERIAL_VERSION_MAJOR=${QATERIAL_VERSION_MAJOR}
+  PRIVATE -DQATERIAL_VERSION_MINOR=${QATERIAL_VERSION_MINOR}
+  PRIVATE -DQATERIAL_VERSION_PATCH=${QATERIAL_VERSION_PATCH}
+  PRIVATE -DQATERIAL_VERSION_TAG=${QATERIAL_VERSION_TAG}
+  PRIVATE -DQATERIAL_VERSION_TAG_HEX=${QATERIAL_VERSION_TAG_HEX}
 )
 target_compile_definitions(qaterialplugin PUBLIC -DQATERIAL_SHARED)
 target_include_directories(qaterialplugin PUBLIC ${CMAKE_CURRENT_LIST_DIR} ${CMAKE_CURRENT_LIST_DIR}/../..)

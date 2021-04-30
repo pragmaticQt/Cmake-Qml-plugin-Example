@@ -17,6 +17,9 @@ ApplicationWindow {
         anchors.fill: parent
         columns: 3
 
+        Text {
+            text: Version.readable
+        }
 
 //        IconDescription {
 //            id: iconDes
