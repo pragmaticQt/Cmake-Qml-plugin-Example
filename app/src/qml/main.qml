@@ -13,22 +13,39 @@ ApplicationWindow {
     height: 480
     title: "Playground"
 
+    TextFile {
+        id: file
+        property string content: 'value'
+        Component.onCompleted: {
+            console.debug(file.open("hello.txt", 0))
+            file.content = file.readAll()
+        }
+    }
+
     GridLayout {
         anchors.fill: parent
         columns: 3
-
+        ColumnLayout {
+            Text {
+                text: file.content
+            }
+            Text {
+                text: file.error
+            }
+        }
         Text {
             text: Version.readable
         }
 
-//        IconDescription {
-//            id: iconDes
-//            cache: false
-//            source: "qrc:/qt.png"
-//            width: 40
-//            height: 40
-//            color: "red"
-//        }
+
+        //        IconDescription {
+        //            id: iconDes
+        //            cache: false
+        //            source: "qrc:/qt.png"
+        //            width: 40
+        //            height: 40
+        //            color: "red"
+        //        }
 
         IconLabelImpl {
             width: 64
@@ -41,7 +58,7 @@ ApplicationWindow {
         // 'myplugin' C++ class
         MyQuickItem {
             id: pluginItem
-//            color: iconDes.color
+            //            color: iconDes.color
             width: 100
             height: 50
         }

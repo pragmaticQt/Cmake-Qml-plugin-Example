@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(myapp VERSION 1.0 LANGUAGES CXX)
+project(QaterialPlugin VERSION 1.0 LANGUAGES CXX)
 include(cmake/Version.cmake)
 
 find_package(Qt5 REQUIRED COMPONENTS 
@@ -33,12 +33,12 @@ set(QATERIAL_DISPLAY_SRCS
 )
 
 set(QATERIAL_IO_HEADERS
-#  ${QATERIAL_SOURCE_DIR}/TextFile.hpp
+  ${QATERIAL_SOURCE_DIR}/TextFile.hpp
   ${QATERIAL_SOURCE_DIR}/Clipboard.hpp
 #  ${QATERIAL_SOURCE_DIR}/FolderTreeModel.hpp
 )
 set(QATERIAL_IO_SRCS
-#  ${QATERIAL_SOURCE_DIR}/TextFile.cpp
+  ${QATERIAL_SOURCE_DIR}/TextFile.cpp
   ${QATERIAL_SOURCE_DIR}/Clipboard.cpp
 #  ${QATERIAL_SOURCE_DIR}/FolderTreeModel.cpp
 )

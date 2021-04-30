@@ -5,6 +5,7 @@
 #include "Qaterial/IconLabelPositionner.hpp"
 #include "Qaterial/Clipboard.hpp"
 #include "Qaterial/Version.hpp"
+#include "Qaterial/TextFile.hpp"
 
 
 void QaterialPlugin::registerTypes(const char* uri) {
@@ -14,6 +15,9 @@ void QaterialPlugin::registerTypes(const char* uri) {
     qaterial::IconDescription      ::registerToQml();
     qaterial::IconLabelImpl        ::registerToQml();
     qaterial::IconLabelPositionner ::registerToQml();
+    qaterial::TextFile             ::registerToQml();
+
     qaterial::Clipboard            ::registerSingleton();
     qaterial::Version              ::registerSingleton();
+
 }
