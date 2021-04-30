@@ -6,6 +6,7 @@
 #include "Qaterial/Clipboard.hpp"
 #include "Qaterial/Version.hpp"
 #include "Qaterial/TextFile.hpp"
+#include "Qaterial/Logger.hpp"
 
 
 void QaterialPlugin::registerTypes(const char* uri) {
@@ -19,5 +20,6 @@ void QaterialPlugin::registerTypes(const char* uri) {
 
     qaterial::Clipboard            ::registerSingleton();
     qaterial::Version              ::registerSingleton();
+    qaterial::Logger               ::registerSingleton();
 
 }

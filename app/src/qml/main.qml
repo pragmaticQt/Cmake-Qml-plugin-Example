@@ -6,7 +6,7 @@ import Qt.labs.platform 1.0
 // Load our plugin from filesystem
 import my.plugin.example 1.0
 import Qaterial 1.0
-import Qaterial.Logger 1.0
+//import Qaterial.Logger 1.0
 
 ApplicationWindow {
     visible: true

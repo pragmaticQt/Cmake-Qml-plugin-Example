@@ -22,7 +22,7 @@ target_compile_definitions(qaterialplugin
   PRIVATE -DQATERIAL_VERSION_TAG=${QATERIAL_VERSION_TAG}
   PRIVATE -DQATERIAL_VERSION_TAG_HEX=${QATERIAL_VERSION_TAG_HEX}
 )
-target_compile_definitions(qaterialplugin PUBLIC -DQATERIAL_SHARED -DNDEBUG)
+target_compile_definitions(qaterialplugin PRIVATE -DQATERIAL_SHARED -DNDEBUG)
 target_include_directories(qaterialplugin PUBLIC ${CMAKE_CURRENT_LIST_DIR} ${CMAKE_CURRENT_LIST_DIR}/../..)
 target_compile_features(
     qaterialplugin

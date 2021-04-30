@@ -1,7 +1,9 @@
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include "Qaterial/Logger.hpp"
+
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+
 #include <QDebug>
 #include <QDir>
 
@@ -16,7 +18,7 @@ int main(int argc, char *argv[]) {
     const auto stdoutSink = std::make_shared<spdlog::sinks::stdout_color_sink_mt>();
     // Redirect qaterial to stdout
     qaterial::Logger::registerSink(stdoutSink);
-    qaterial::Logger::registerSingleton("Qaterial.Logger");
+//    qaterial::Logger::registerSingleton("Qaterial.Logger");
     stdoutSink->set_level(spdlog::level::debug);
     qaterial::Logger::QATERIAL->set_level(spdlog::level::debug);
 
