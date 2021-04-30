@@ -49,19 +49,12 @@ set(QATERIAL_UTILS_HEADERS
 #  ${QATERIAL_SOURCE_DIR}/Property.hpp
   ${QATERIAL_SOURCE_DIR}/Version.hpp
 #  ${QATERIAL_SOURCE_DIR}/Utils.hpp
-#  ${QATERIAL_SOURCE_DIR}/Utils.cpp
 #  ${QATERIAL_SOURCE_DIR}/Logger.hpp
-#  ${QATERIAL_SOURCE_DIR}/Logger.cpp
 )
 
 set(QATERIAL_UTILS_SRCS
-#  ${QATERIAL_SOURCE_DIR}/Qaterial.hpp
-#  ${QATERIAL_SOURCE_DIR}/Export.hpp
-#  ${QATERIAL_SOURCE_DIR}/Property.hpp
   ${QATERIAL_SOURCE_DIR}/Version.cpp
-#  ${QATERIAL_SOURCE_DIR}/Utils.hpp
 #  ${QATERIAL_SOURCE_DIR}/Utils.cpp
-#  ${QATERIAL_SOURCE_DIR}/Logger.hpp
 #  ${QATERIAL_SOURCE_DIR}/Logger.cpp
 )
 source_group("Header" ${QATERIAL_DISPLAY_HEADERS} ${QATERIAL_IO_HEADERS} ${QATERIAL_UTILS_HEADERS})

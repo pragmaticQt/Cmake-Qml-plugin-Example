@@ -7,7 +7,7 @@ qt5_add_resources(APP_RESOURCES ${CMAKE_CURRENT_LIST_DIR}/src/qml/app.qrc)
 add_executable(
     ${PROJECT_NAME}
     src/main.cpp        # Our example project consists only of one .cpp file
-
+    ../Qaterial/Logger.cpp
     ${APP_RESOURCES}    # App resources file
 )
 #target_compile_definitions(${PROJECT_NAME} PUBLIC -DQATERIAL_STATIC)
