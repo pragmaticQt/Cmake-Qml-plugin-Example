@@ -17,7 +17,8 @@ int main(int argc, char *argv[]) {
     // Redirect qaterial to stdout
     qaterial::Logger::registerSink(stdoutSink);
     qaterial::Logger::registerSingleton("Qaterial.Logger");
-
+    stdoutSink->set_level(spdlog::level::debug);
+    qaterial::Logger::QATERIAL->set_level(spdlog::level::debug);
 
     // Add import search path
     engine.addImportPath("plugins");

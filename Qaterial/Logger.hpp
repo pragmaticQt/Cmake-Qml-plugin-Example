@@ -58,7 +58,7 @@ class QATERIAL_API_ Logger : public QObject
     Q_OBJECT
     QATERIAL_SINGLETON_IMPL(Logger, logger, Logger)
 
-//    Q_CLASSINFO(CLASSINFO_HEADER, "Qaterial/Logger 1.0 SINGLETON")
+    Q_CLASSINFO(CLASSINFO_HEADER, "Qaterial.Logger/Logger 1.0 SINGLETON")
 public:
     Logger(QObject* parent = nullptr) : QObject(parent) {}
 

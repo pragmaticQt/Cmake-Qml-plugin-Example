@@ -67,6 +67,7 @@ ApplicationWindow {
         MyQml {
             id: myQml
             onClicked: {
+                Logger.debug("clicked")
                 Clipboard.clear()
                 MyScript.onClicked(pluginItem)
             }
